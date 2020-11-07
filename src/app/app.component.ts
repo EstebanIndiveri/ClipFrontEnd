@@ -12,6 +12,8 @@ export class AppComponent {
 
   toogleSidebar(){
     this.opened=!this.opened;
+    console.log('app');
+    
   }
 
 }

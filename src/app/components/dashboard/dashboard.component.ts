@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { PersonasComponent } from '../personas/personas.component';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',

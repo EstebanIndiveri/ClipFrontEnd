@@ -3,25 +3,27 @@
   <app-personas></app-personas> -->
   <ng-sidebar-container>
     <!-- sidebar -->
-    <ng-sidebar [opened]="opened">
+    <ng-sidebar [opened]="opened" [mode]="'push'">
       <p>Sidebar Contets</p>
         <button class="btn" (click)="toogleSidebar()">
           Close sidebar
         </button>
         <ul class="menu">
-          <li><a routerLink="/">Home</a> </li>
-          <li><a routerLink="/profile">Perfil</a> </li>
-          <li><a routerLink="/operations">Operaciones</a> </li>
+          <li><a routerLink="/" (click)="toogleSidebar()">Home</a> </li>
+          <li><a routerLink="/profile" (click)="toogleSidebar()">Perfil</a> </li>
+          <li><a routerLink="/operations" (click)="toogleSidebar()">Operaciones</a> </li>
 
         </ul>
     </ng-sidebar>
     
     <div ng-sidebar-content>
-      <!-- Page Contents -->
-
+      <!-- Page Header -->
+      <app-header></app-header>
       <button class="btn" (click)="toogleSidebar()">
         Open Sidebar
       </button>
+      <!-- Page body -->
+      <router-outlet></router-outlet>
     </div>
 
   </ng-sidebar-container>

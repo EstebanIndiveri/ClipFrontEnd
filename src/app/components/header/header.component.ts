@@ -5,12 +5,17 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent  {
   title="Programa Clip 2020";
   
   constructor() { }
+  opened=false;
 
-  ngOnInit(): void {
+  toogleSidebar(){
+    this.opened=!this.opened;
+    console.log('header');
+    
   }
+
 
 }
