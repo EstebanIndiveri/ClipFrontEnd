@@ -18,5 +18,5 @@ export class AppComponent{
     this.opened=!this.opened;
     // console.log('app');
   }
-
+  
 }

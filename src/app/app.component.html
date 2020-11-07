@@ -27,7 +27,9 @@
     
     <div ng-sidebar-content>
       <!-- Page Header -->
-      <app-header 
+      <app-header
+      [sidebar]="opened"
+      
       (cerrarNav)="opened=$event"
       ></app-header>
       <!-- <button class="btn" (click)="toogleSidebar()">
