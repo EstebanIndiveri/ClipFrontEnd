@@ -1,7 +1,7 @@
 
  
     <!-- <table class="table table-striped mt-3"> -->
-      <div class="antialiased">
+      <div class="antialiased rounded-lg" [ngStyle]="{'max-width': '80vw','margin':'0 auto','background-color':'white'}">
             <table class="responsive-table highlight mt-8 w-full centered animate__animated animate__fadeIn animate__slow">
                 <thead>
                   <tr>
@@ -16,12 +16,12 @@
                         <td>{{persona.Id}}</td>
                         <td>{{persona.Apellido}}</td>
                         <td>{{persona.Nombre}}</td>
-                        <td><button class="waves-effect waves-light btn red lighten-1">Eliminar</button></td>
+                        <td><button class="waves-effect waves-light btn red lighten-3">Eliminar</button></td>
                     </tr>
                 </tbody>
               </table>
             <div>
-            <button class="btn-floating btn-large waves-effect waves-light red mt-8 float-btn " (click)="nuevaPersona()"><i class="material-icons">add</i></button>
+            <button class="btn-floating btn-large waves-effect waves-light grey darken-2 mt-8 float-btn " (click)="nuevaPersona()"><i class="material-icons">add</i></button>
             </div>
       </div>
 

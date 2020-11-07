@@ -24,4 +24,38 @@ p{
     display: flex;
     align-items: center;
     // background-color: white !important;
+    :active{
+        color:white
+    }
+    :focus{
+        color:white
+    }
+}
+
+.user-view{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+
+.image_back_profile{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS1YcnkYtWIouLoHaTZvfdPSnfXtGTgmXbVKA&usqp=CAU");
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    opacity: 0.8;
+}
+.photoUser{
+    background-image: url("https://randomuser.me/api/portraits/women/65.jpg");
+    height: 80px;
+    width: 80px;
+    position:absolute;
+    top: 40px;
+    // margin: 0 auto;
+  left : 13px;
+  border: 3px solid white;
+  z-index: 1;
 }
