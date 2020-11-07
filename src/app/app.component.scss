@@ -3,7 +3,10 @@ height: 100vh;
 }
 
 ::ng-deep .ng-sidebar{
-    background-color: #f4f4f4;
+    // background-color: #f4f4f4;
+    background-color: white;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
     width: 300px;
     padding: 2em 3em;
     box-shadow: 0 0 2.5em rgba(85,85,85,0.5);

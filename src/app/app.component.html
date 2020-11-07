@@ -5,7 +5,7 @@
     <!-- sidebar -->
     <ng-sidebar [opened]="opened" [mode]="'push'">
       <p>Sidebar Contets</p>
-        <button class="btn" (click)="toogleSidebar()">
+        <button class="waves-effect waves-purple btn-flat btn-floating text-center menu_btn" (click)="toogleSidebar()">
           Close sidebar
         </button>
         <ul class="menu">
@@ -18,10 +18,12 @@
     
     <div ng-sidebar-content>
       <!-- Page Header -->
-      <app-header></app-header>
-      <button class="btn" (click)="toogleSidebar()">
+      <app-header 
+      (cerrarNav)="opened=$event"
+      ></app-header>
+      <!-- <button class="btn" (click)="toogleSidebar()">
         Open Sidebar
-      </button>
+      </button> -->
       <!-- Page body -->
       <router-outlet></router-outlet>
     </div>

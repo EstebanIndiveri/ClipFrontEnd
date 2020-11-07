@@ -15,8 +15,10 @@ const routes: Routes = [{
   {
     path:'operations',
     component:OperationsComponent
+  },
+  {
+    path:'**',pathMatch:'full',redirectTo:''
   }
-
 ];
 
 @NgModule({
