@@ -1,0 +1,22 @@
+.login_space{
+    max-height: calc(100vh - 100px) !important;
+}
+#img_login_space{
+    max-height: 510px !important;
+}
+
+// login input
+
+  /* label color */
+  .input-field label {
+    color: #000;
+  }
+  /* label focus color */
+  .input-field input:focus + label {
+    color: #000;
+  }
+  /* label underline focus color */
+  .input-field input :focus {
+    border-bottom: 1px solid #000 !important;
+    box-shadow: 0 1px 0 0 #000 !important;
+  }

@@ -12,6 +12,7 @@ import { SidebarModule } from 'ng-sidebar';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { OperationsComponent } from './components/operations/operations.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { OperationsComponent } from './components/operations/operations.componen
     SidebarComponent,
     DashboardComponent,
     ProfileComponent,
-    OperationsComponent
+    OperationsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
