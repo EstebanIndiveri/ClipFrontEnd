@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { NotFountComponent } from './components/404/notfount.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { LoginComponent } from './components/login/login.component';
 import { OperationsComponent } from './components/operations/operations.component';
@@ -22,7 +23,7 @@ const routes: Routes = [{
     component:LoginComponent
   },
   {
-    path:'**',pathMatch:'full',redirectTo:''
+    path:'**',pathMatch:'full',component:NotFountComponent
   }
 ];
 

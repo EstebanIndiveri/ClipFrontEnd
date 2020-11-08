@@ -13,6 +13,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { OperationsComponent } from './components/operations/operations.component';
 import { LoginComponent } from './components/login/login.component';
+import { NotFountComponent } from './components/404/notfount.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,9 @@ import { LoginComponent } from './components/login/login.component';
     DashboardComponent,
     ProfileComponent,
     OperationsComponent,
-    LoginComponent
+    LoginComponent,
+  NotFountComponent
+
   ],
   imports: [
     BrowserModule,
