@@ -20,5 +20,12 @@ header{
         margin-bottom: .2rem;
         
     }
+
+    @media (max-width:790px) {
+        display: block;
+        .wecomeMessage{
+            display: none;
+        }
+    }
 }
 
