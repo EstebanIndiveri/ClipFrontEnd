@@ -1,0 +1,18 @@
+.carta{
+    transition: 300ms all ease-in-out ;
+    :hover{
+        transform: scale(1.1);
+    }
+}
+.test{
+    transition: 300ms all ease-in-out ;
+
+}
+.logo{
+    
+    transform: scale(1) !important;
+    :hover{
+    transform: scale(1) !important;
+
+    }
+}
