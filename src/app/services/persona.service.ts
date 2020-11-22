@@ -7,7 +7,7 @@ import {Persona} from '../models/persona.model';
   providedIn: 'root'
 })
 export class PersonaService {
-  url="https://localhost:44300/api/persona";
+  url="https://localhost:44316/api/cliente/2";
   constructor( private http:HttpClient) { 
     console.log("Persona service is running");
   }
