@@ -14,6 +14,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { OperationsComponent } from './components/operations/operations.component';
 import { LoginComponent } from './components/login/login.component';
 import { NotFountComponent } from './components/404/notfount.component';
+import { NewUserFormComponent } from './components/new-user-form/new-user-form.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { NotFountComponent } from './components/404/notfount.component';
     ProfileComponent,
     OperationsComponent,
     LoginComponent,
-  NotFountComponent
+  NotFountComponent,
+  NewUserFormComponent,
 
   ],
   imports: [

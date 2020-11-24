@@ -2,6 +2,7 @@
  
     <!-- <table class="table table-striped mt-3"> -->
       <div class="antialiased rounded-lg" [ngStyle]="{'max-width': '80vw','margin':'0 auto','background-color':'white'}">
+
             <table class="responsive-table highlight mt-8 w-full centered animate__animated animate__fadeIn animate__slow">
                 <thead>
                   <tr>
@@ -11,11 +12,11 @@
                     <th>Gestión</th>
                   </tr>
                 </thead>
-                <tbody>
-                    <tr *ngFor="let persona of personas">
-                        <td>{{persona.Id}}</td>
-                        <td>{{persona.Apellido}}</td>
-                        <td>{{persona.Nombre}}</td>
+              <tbody>
+                    <tr>
+                         <td>{{cliente.ID}}</td>
+                        <td>{{cliente.Apellido}}</td>
+                        <td>{{cliente.Nombre}}</td> 
                         <td><button class="waves-effect waves-light btn red lighten-3">Eliminar</button></td>
                     </tr>
                 </tbody>
