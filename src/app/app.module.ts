@@ -16,6 +16,7 @@ import { LoginComponent } from './components/login/login.component';
 import { NotFountComponent } from './components/404/notfount.component';
 import { NewUserFormComponent } from './components/new-user-form/new-user-form.component';
 import { FormsModule } from '@angular/forms';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { FormsModule } from '@angular/forms';
     LoginComponent,
   NotFountComponent,
   NewUserFormComponent,
+  HomeComponent,
 
   ],
   imports: [

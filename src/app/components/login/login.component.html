@@ -2,7 +2,12 @@
 <div class="w-full flex login_space mt-4 animate__animated animate__fadeIn animate__slow">
     <img id="img_login_space" src="https://images.unsplash.com/photo-1540569876033-6e5d046a1d77?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="background" class="object-cover object-center h-screen w-5/12">
     <div class="bg-white flex flex-col justify-center items-center w-7/12 shadow-lg full">
+      <p class="rounded bg-red-400 errores p-5  text-white font-black">test</p>
+
       <h1 class="text-3xl font-bold text-orange-500 mb-2">Iniciar Sesión</h1>
+      <div>
+        <p class="rounded bg-red-400 errores p-5 hidden text-white font-black"></p>
+      </div>
       <div class="w-1/2 text-center">
         <input [(ngModel)]="username" required="required" type="text" name="username" placeholder="Usuario" autocomplete="off"
         class="shadow-md border w-full h-10 px-3 py-2 text-orange-500 focus:outline-none focus:border-orange-500 mb-3 rounded">
@@ -13,17 +18,22 @@
     <label id="aaaa" for="email">Email</label>
     <span class="helper-text" data-error="Must be a valid email" data-success="Perfect!"></span>
   </div> -->
-        <button class="waves-effect waves-light btn orange accent-3 text-white px-3 py-1 rounded text-lg focus:outline-none shadow" (click)="login()">
+        <button class="waves-effect waves-light btn orange accent-3 text-white px-3 py-1 rounded text-lg focus:outline-none shadow mt-4" (click)="mostrarMensajeEjemplo()">
             <!-- <a class="waves-effect text-white" routerLink="/"> -->
                 Ingresar
             <!-- </a> -->
         </button>
         <div class="mt-5">
-        <button class="waves-effect waves-light btn orange accent-3 text-white px-3 py-1 rounded text-lg focus:outline-none shadow" (click)="redirectRegister()">
+        <!-- <button class="waves-effect waves-light btn orange accent-3 text-white px-3 py-1 rounded text-lg focus:outline-none shadow" (click)="redirectRegister()"> -->
           <!-- <a class="waves-effect text-white" routerLink="/"> -->
-              Registrarse
+              <!-- Registrarse -->
           <!-- </a> -->
-      </button>
+      <!-- </button> -->
+      <button class="waves-effect waves-light btn orange accent-3 text-white px-3 py-1 rounded text-lg focus:outline-none shadow" (click)="ejemploToast()">
+        <!-- <a class="waves-effect text-white" routerLink="/"> -->
+            Registrarse
+        <!-- </a> -->
+    </button>
     </div>
       </div>
     </div>
