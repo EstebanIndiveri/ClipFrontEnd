@@ -3,6 +3,9 @@
 }
 #img_login_space{
     max-height: 510px !important;
+    @media(max-width: 750px){
+        display: none;
+    }
 }
 
 // login input
@@ -33,3 +36,9 @@
    
    }
    
+   .full{
+    @media(max-width: 750px){
+        width: 100vw;
+        height: 80vh;
+    }
+}

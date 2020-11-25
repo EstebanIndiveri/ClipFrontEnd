@@ -15,6 +15,7 @@ import { OperationsComponent } from './components/operations/operations.componen
 import { LoginComponent } from './components/login/login.component';
 import { NotFountComponent } from './components/404/notfount.component';
 import { NewUserFormComponent } from './components/new-user-form/new-user-form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { NewUserFormComponent } from './components/new-user-form/new-user-form.c
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    SidebarModule.forRoot()
+    SidebarModule.forRoot(),
+    FormsModule
   ],
   providers: [PersonaService],
   bootstrap: [AppComponent]

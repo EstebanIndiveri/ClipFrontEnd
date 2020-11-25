@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, DoCheck} from '@angular/core';
 import { Observable } from 'rxjs';
+import { Persona } from 'src/app/models/persona.model';
 import { PersonaService } from 'src/app/services/persona.service';
 
 @Component({
@@ -8,41 +9,56 @@ import { PersonaService } from 'src/app/services/persona.service';
   styleUrls: ['./new-user-form.component.scss'],
   providers:[PersonaService]
 })
-export class NewUserFormComponent implements OnInit {
+export class NewUserFormComponent implements DoCheck{
+  // username:string;
+  // email: string;
+  // password: string;
+  // confirmPassword: string;
+  // passwordError: boolean;
 
-  public user:any;
-  public userId:any;
-  public fecha:any;
-  public new_client:any;
- 
+  public isValid=false;
 
+  "ID": 0;
+  nombre: string=''; //required
+  usuario:  string=''; //required
+  apellido: string=''; //required
+  telefono:string=''; //required
+  email: string=''; //required
+  dni: number;
+  cuil:number;
+  direccion:string;
+  nacionalidad:string;
+  sexo: string;
+  password:string=''; //required
+  sitacion_crediticia:string;
 
-  constructor(
-    private _personaService:PersonaService
-    ) { 
-      this.userId=1;
-      this.new_client={
-        "nombre": "",
-        "apellido":'',
-        'dni':'',
-        'email':'',
-        'telefono':'',
-        'usuario':'',
-        'clave':''
-    };
-    }
-
-  ngOnInit() {
+  constructor(public userService: PersonaService) {} 
+  async register() {
    
+    let user:Persona = await new Persona();
+    user.Email=this.email.trim();
+    user.Apellido=this.apellido.trim();
+    user.Contraseña=this.password.trim();
+    user.Telefono=this.telefono;
+    user.Usuario=this.usuario.trim();
+    user.ID=0;
+    user.Nombre=this.nombre.trim();
+    
+    this.userService.register(user).subscribe(data => {
+      console.log(data);
+      // console.log(user);
+    });
   }
-  onSubmit(form){
-    this._personaService.addUser(this.new_client).subscribe(
-      response=>{
-        console.log(response);
-        alert(`Usuario creado con el nombre: ${response.name}`);
+  ngDoCheck(){
+    //Called every time that the input properties of a component or a directive are checked. Use it to extend change detection by performing a custom check.
+    //Add 'implements DoCheck' to the class.
+    if(this.usuario !=''&&this.apellido !=''&&this.nombre !=''&&this.telefono !=''&&this.email !=''){
+      this.isValid=true;
+      console.log('sigo mal');
       
-    })
-  }
+    }
+  }	
+ 
 }
 
 
